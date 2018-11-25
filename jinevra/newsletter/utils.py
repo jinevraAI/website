@@ -20,14 +20,14 @@ class SendSubscriberMail(object):
                 'email_address': self.email,
                 'status': 'subscribed',
                 })
-            print("subscribed!")
+            return True
         except HTTPError as e:
             if e.response.status_code == 400:
                 json = e.response.json()
                 print("ERROR:", profile)
                 raise MailChimpError(
                     json.get('errors') or json.get('detail') or json)
-                return False
+                return json
             else:
                 print(e)
                 print(profile)
