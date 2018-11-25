@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
-from .models import Subscriber
 from .utils import SendSubscriberMail
 import os
 
@@ -12,11 +11,11 @@ def home(request):
 def subscribe(request):
     if request.method == 'POST':
         email = request.POST.get('email_address', '')
-        email_qs = Subscriber.objects.filter(email_address=email)
-        if email_qs.exists():
-            data = {"status" : "404"}
-            return JsonResponse(data)
+        mc = SendSubscriberMail(email)
+        if mc:
+            data = {"status": "200"}
         else:
-            Subscriber.objects.create(email_address=email)
-            SendSubscriberMail(email)
+            data = {"status" : "404"}
+        return JsonResponse(data)
+
     return HttpResponse("/")

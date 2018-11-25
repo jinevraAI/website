@@ -11,18 +11,15 @@ $('#subscribe').submit(function(e){
           data : email_data,
           success : function(response){
             $('#email_address').val('');
-            if(response.status == "400"){
-              alert("This email address might have previously been unsubscribed from our mailing list or is otherwise invalid. Please contact us at hello@jinevra.ai for assistance.");
+            if(response.status == "200"){
+              alert("Thank you for subscribing to the newsletter. Opt out via email or contact us at hello@jinevra.ai to unsubscribe.");
             }
             if(response.status == "404"){
-              alert("This email address has already been subscribed to our mailing list. Email hello@jinevra.ai for assistance.");
-            }
-            else{
-              alert("Thank you for subscribing to the newsletter. Opt out via email or contact us at hello@jinevra.ai to unsubscribe.");
+              alert("This email address cannot be subscribed to our mailing list. Email hello@jinevra.ai for assistance.");
             }
           },
           error: function(response) {
-            alert("Oops - something went wrong - try again later or email us at hello@jinevra.ai");
+            alert("This email address cannot be subscribed to our mailing list. Email hello@jinevra.ai for assistance.");
             $('#email_address').val('');
           }
         });
