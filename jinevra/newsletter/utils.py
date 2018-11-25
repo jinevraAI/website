@@ -5,11 +5,9 @@ from django.conf import settings
 from urllib.error import HTTPError
 
 def SendSubscriberMail(email):
-    # def __init__(self, email):
-    #     self.email = email
-    # thread = threading.Thread(target=self.run, args=())
-    # thread.daemon = True
-    # thread.start()
+    thread = threading.Thread(args=())
+    thread.daemon = True
+    thread.start()
 
     # def run(self):
     API_KEY = os.environ.get('MC_API', '')
