@@ -12,7 +12,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET', '')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'jinevra.herokuapp.com']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'jinevra.herokuapp.com', 'jinevra.ai']
 
 
 # Application definition
