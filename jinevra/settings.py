@@ -12,7 +12,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET', '')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'jinevra.herokuapp.com', '*.jinevra.ai',
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'jinevra.herokuapp.com', '.jinevra.ai',
 'graceful-emu-ka3axysyg297h7wqngllt5r3.herokudns.com',
 'whispering-pteranodon-xcuevxzquhtf61yq634udul2.herokudns.com'
 ]
