@@ -308,7 +308,7 @@ section.features .feature-item i {
 section.cta {
   position: relative;
   padding: 250px 0;
-  background-image: url("../img/susan-yin-647448-unsplash.jpg");
+  background-image: url("..static/img/susan-yin-library.jpg");
   background-position: center;
   background-size: cover;
 }
