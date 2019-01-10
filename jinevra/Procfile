@@ -1,1 +1,1 @@
-web: gunicorn jinevra.wsgi —-log-file -
+web gunicorn jinevra.wsgi —-log-file -
