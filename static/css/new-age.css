@@ -308,7 +308,7 @@ section.features .feature-item i {
 section.cta {
   position: relative;
   padding: 250px 0;
-  background-image: url("..static/img/susan-yin-library.jpg");
+  background-image: url("../img/janko-ferlic-unsplash.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -434,9 +434,7 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 }
 
 .bg-primary {
-  background: #d1c377;
-  background: -webkit-gradient(linear, left top, left bottom, from(#d1c377), to(#fdc539));
-  background: linear-gradient(#d1c377, #fdc539);
+  background: #d1c377 !important;
 }
 
 .text-primary {
